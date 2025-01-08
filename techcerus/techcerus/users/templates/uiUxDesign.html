@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techcerus | UI/UX Design</title>
+
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" href="{%static 'assets/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/mdb.min.css'%}">
+    <link rel="stylesheet" href="{%static 'node_modules/bootstrap-icons/font/bootstrap-icons.css'%}">
+
+    <!-- FONT AWESOME CSS LINK -->
+    <link rel="stylesheet" href="{%static 'assets/css/all.css'%}">
+
+    <!-- STYLE CSS LINK -->
+    <link rel="stylesheet" href="{%static 'assets/css/style.css'%}">
+</head>
+<body>
+  <!-- header section begins here -->
+  <header class="bg-white shadow py-2" id="header">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <!-- logo and humberger Menu -->
+        <div class="d-flex flex-row align-items-center">
+          <a href="#" class="d-block text-start text-primary logoLink">
+            <img src="{%static 'assets/images/logo.png'%}" alt="techcerus logo" width="60" height="60">
+          </a>
+        </div>
+        <!-- contact us btn -->
+        <a href="{% url 'freeQuote' %}" class="btn btn-primary bi bi-bolt shadow-0"><i class="bi bi-envelope-paper text-white me-2"></i>Get In Touch</a>
+      </div>
+    </div>
+  </header>
+  <!-- header section ends here -->
+
+  <div class="container-fluid">
+    <!-- main section begins here -->
+    <main class="main" id="main">
+      <!-- contact Us section -->
+      <section class="mb-2 py-4" id="contactUsSection">
+        <div class="row mb-2 py-1">
+          <div class="col-12 mb-4">
+            <span class="h6 d-block text-center text-primary fw-bold">Contact Us UI/UX Design Services</span>
+            <span class="h5 d-block text-center fw-bold">Get In Touch</span>
+          </div>
+          <div class="col-12 bg-white shadow border border-dark">
+            <form action="#" method="post" class="contactForm p-3 mb-2" id="contactForm" name="contactForm">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-lg-6 col-12 mb-3">
+                  <label for="userName" class="d-block mb-1">Name</label>
+                  <input type="text" name="userName" class="d-block w-100 contactName" id="ContactName" placeholder="Lestone Mandieka" required>
+                </div>
+                <div class="col-lg-6 col-12 mb-3">
+                  <label for="telNumber" class="d-block mb-1">Telephone No.</label>
+                  <input type="tel" class="d-block w-100 contactName" name="telNumber" id="telNumber" placeholder="+254712339293" required>
+                </div>
+                <div class="col-12 mb-3">
+                  <label for="userEmail" class="d-block mb-1">Email Address</label>
+                  <input type="email" class="d-block w-100 contactName" name="userEmail" id="ContactName" placeholder="info@techcerus.com" required>
+                </div>
+                <div class="col-12 mb-3">
+                  <label for="msgHeading" class="d-block mb-1">Heading</label>
+                  <input type="text" class="d-block w-100 contactName" name="msgHeading" id="ContactName" value="UI/UX Design">
+                </div>
+                <div class="col-12 mb-1">
+                  <label for="msgBody" class="d-block mb-1">Message</label>
+                  <textarea name="msgBody" class="d-block w-100 mb-3" id="contactMsg" cols="30" rows="4" required></textarea>
+                </div>
+                <div class="col-12 mb-4">
+                  <button type="submit" class="btn btn-primary"><i class="bi bi-send text-white me-1"></i>Send</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- contact Us section -->
+    </main>
+    <!-- main section ends here -->
+  </div>
+
+
+    <!-- JQUERY JS LINK -->
+    <script src="{%static 'assets/js/jquery.js'%}"></script>
+
+    <!-- BOOTSTRAP JS LINK -->
+    <script src="{%static 'assets/js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{%static 'assets/js/mdb.min.js'%}"></script>
+
+    <!-- FONTAWESOME JS LINK -->
+    <script src="{%static 'assets/js/all.js'%}"></script>
+
+    <!-- main js link -->
+    <script src="{%static 'assets/js/main.js'%}"></script>
+</body>
+
+</html>

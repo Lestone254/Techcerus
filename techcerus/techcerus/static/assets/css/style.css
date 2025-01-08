@@ -1,0 +1,132 @@
+ /* import font.css */
+
+ @import url(./font.css);
+
+ /* universal styling */
+ * {
+     font-family: "lato", sans-serif;
+     font-size: 15px;
+     color: #332D2D;
+ }
+
+ /* width */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body {
+  position: relative;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.main {
+  margin-top: 87px;
+}
+
+/* navbar styling begins here */
+.navLinks, .navLinksSm {
+  color: #332D2D;
+  font-weight: 600;
+}
+
+.navLinks:hover, .navLinksSm:hover {
+  color: #3b72ca;
+}
+
+.navLinks.active {
+  color: #3b72ca;
+  border-bottom: 2px solid #3b72ca;
+  padding-bottom: 4px;
+}
+
+.humburgerBtn {
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: 600;
+}
+/* navbar styling ends here */
+.homeSection {
+  height: 63vh;
+  background-image: url('../images/image5.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.homeSection .row {
+  background: rgba(136, 136, 136, 0.2);
+  height: 100%;
+  width: 100%;
+} 
+
+.servicesIcon {
+  background-color: #9FA6B2;
+  padding: 9px 12px;
+  border-radius: 50%;
+}
+
+.serviceCard p {
+  height: 171px;
+}
+
+@media screen and (max-width: 940px) {
+  .serviceCard p {
+    height: auto;
+  }
+}
+
+/* services section styling begins hereservices section styling ends here */
+
+
+/* project scetion stling begins here */
+.projectLink:hover {
+  text-decoration: underline;
+}
+/* project section styling ends here */
+
+/* blog section styling begins here */
+.blogContainer {
+  border: 1px solid #9FA6B2;
+  height: 345px;
+}
+
+.blogDescText {
+  font-size: 15px;
+  font-weight: 400;
+  width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* blog section styling ends here */
+
+/* footer styling begins here */
+.footerLink {
+  color: #332D2D;
+  font-weight: 500;
+}
+
+.socialLink {
+  color: #3b72ca;
+  font-weight: 500;
+}
+/* footer styling ends here */

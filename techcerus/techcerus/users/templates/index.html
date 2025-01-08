@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techcerus | Welcome</title>
+    <link rel="icon" type="image/x-icon" href="{%static 'assets/images/favicon.png'%}">
+
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" href="{%static 'assets/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/mdb.min.css'%}">
+    <link rel="stylesheet" href="{%static 'node_modules/bootstrap-icons/font/bootstrap-icons.css'%}">
+
+    <!-- FONT AWESOME CSS LINK -->
+    <link rel="stylesheet" href="{%static 'assets/css/all.css'%}">
+
+    <!-- STYLE CSS LINK -->
+    <link rel="stylesheet" href="{%static 'assets/css/style.css'%}">
+</head>
+<body>
+  <!-- header section begins here -->
+  <header class="bg-white shadow py-2" id="header">
+    <div class="container-fluid">
+      <div class="d-flex justify-content-between align-items-center">
+        <!-- logo and humberger Menu -->
+        <div class="d-flex flex-row align-items-center">
+          <span class="humburgerBtn bi bi-list me-1 d-inline d-lg-none" id="humburgerBtn"></span>
+          <a href="#" class="d-block text-start text-primary logoLink">
+            <img src="{%static 'assets/images/logo.png' %}" alt="techcerus logo" width="60" height="60">
+          </a>
+        </div>
+        <!-- navbar -->
+        <nav class="nav d-none d-lg-flex justify-content-between">
+          <a href="#main" class="navLinks active d-block mx-2 px-1">Home</a>
+          <a href="#servicesSection" class="navLinks d-block mx-2 px-1">Services</a>
+          <a href="#portofolioSection" class="navLinks d-block mx-2 px-1">Portofolio</a>
+          <a href="#testimonialsSection" class="navLinks d-block mx-2">Testimonials</a>
+          <a href="#blogSection" class="navLinks d-block mx-2 px-1">Blog</a>
+          <a href="#contactUsSection" class="navLinks d-block mx-2 px-1">Contact Us</a>
+        </nav>
+        <!-- contact us btn -->
+        <a href="#contactUsSection" class="btn btn-primary bi bi-bolt shadow-0"><i class="bi bi-envelope-paper text-white me-2"></i>Get In Touch</a>
+      </div>
+      <!-- small screen navbar -->
+      <nav class="navSmall d-none d-lg-none" id="navSmall">
+        <a href="#main" class="navLinksSm d-block my-4">Home</a>
+        <a href="#servicesSection" class="navLinksSm d-block my-4">Services</a>
+        <a href="#portofolioSection" class="navLinksSm d-block my-4">Portofolio</a>
+        <a href="#testimonialsSection" class="navLinksSm d-block my-4">Testimonials</a>
+        <a href="#blogSection" class="navLinksSm d-block my-4">Blog</a>
+        <a href="#contactUsSection" class="navLinksSm d-block my-4">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+  <!-- header section ends here -->
+
+  <div class="container-fluid">
+    <!-- main section begins here -->
+    <main class="main" id="main">
+      <!-- home section begins -->
+      <section class="homeSection d-flex justify-content-center align-items-center mb-4 mx-0 px-0" id="homeSection">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-12">
+            <span class="h1 d-block text-primary fw-bold text-center py-1">Software Design & Development Company</span>
+            <span class="d-block h4 py-2 text-center text-white">
+              Creating beautiful products engineered to drive growth for the world's leading brands.
+            </span>
+            <div class="d-flex flex-row justify-content-center align-items-center">
+              <a href="#portofolioSection" class="btn btn-primary me-3">Our Portofolio</a>
+              <a href="#contactUsSection" class="btn btn-white"><i class="bi bi-envelope-paper text-dark me-2"></i>Get In Touch</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- home section ends -->
+
+      <!-- services section begins -->
+      <section class="mb-4 px-0 py-4 bg-light" id="servicesSection">
+        <div class="row mx-0 px-0">
+          <div class="col-12 mb-4">
+            <span class="h6 d-block text-center text-primary fw-bold">Our Services</span>
+            <span class="h5 d-block text-center fw-bold">Here's what we offer</span>
+          </div>
+          <!-- mobile app dev -->
+          <div class="col-lg-3 col-12 mb-4">
+            <div class="serviceCard bg-white shadow rounded px-2 py-4">
+              <div class="d-flex justify-content-center align-items-center mb-3">
+                <span class="servicesIcon d-block">
+                  <i class="bi bi-android text-white"></i>
+                </span>
+              </div>
+              <span class="d-block text-center fw-bold h6">Mobile Apps Development</span>
+              <p class="text-center py-2">
+                We are experts at various mobile development technologies for iOS, Android as well as Cross platform.
+              </p>
+              <a href="{% url 'mobileServices' %}" class="d-flex justify-content-center align-items-center"><i class="fas fa-phone-volume text-primary me-1"></i> Hire Developer</a>
+            </div>
+          </div>
+          <!-- web design & dev -->
+          <div class="col-lg-3 col-12 px-2 mb-4">
+            <div class="serviceCard bg-white shadow rounded px-2 py-4">
+              <div class="d-flex justify-content-center align-items-center mb-3">
+                <span class="servicesIcon d-block">
+                  <i class="bi bi-code-slash text-white"></i>
+                </span>
+              </div>
+              <span class="d-block text-center fw-bold h6">Web Design & Development</span>
+              <p class="text-center py-2">
+                We provide fast, robust and secure websites that are SEO friendly using the best and reliable technologies with beautiful UIs while offering the very best user Experience (UX).
+              </p>
+              <a href="{% url 'webDesignAndDevelopment' %}" class="d-flex justify-content-center align-items-center"><i class="fas fa-phone-volume text-primary me-1"></i> Hire Developer</a>
+            </div>
+          </div>
+          <!-- ui/ux design -->
+          <div class="col-lg-3 col-12 px-2 mb-4">
+            <div class="serviceCard bg-white shadow rounded px-2 py-4">
+              <div class="d-flex justify-content-center align-items-center mb-3">
+                <span class="servicesIcon d-block">
+                  <i class="bi bi-braces text-white"></i>
+                </span>
+              </div>
+              <span class="d-block text-center fw-bold h6">UI/UX Design</span>
+              <p class="text-center py-2">
+                We specialise in expert UI/UX services that create intuitive, engaging, and memorable user experiences for your website or application.
+              </p>
+              <a href="{% url 'uiUxDesign' %}" class="d-flex justify-content-center align-items-center"><i class="fas fa-phone-volume text-primary me-1"></i> Hire Developer</a>
+            </div>
+          </div>
+          <!-- management systems -->
+          <div class="col-lg-3 col-12 px-2 mb-4">
+            <div class="serviceCard bg-white shadow rounded px-2 py-4">
+              <div class="d-flex justify-content-center align-items-center mb-3">
+                <span class="servicesIcon d-block">
+                  <i class="bi bi-gear text-white"></i>
+                </span>
+              </div>
+              <span class="d-block text-center fw-bold h6">Management Systems</span>
+              <p class="text-center py-2">
+                Management systems that are a set of software solutions that keep operations flowing for your enterprise or organization.
+              </p>
+              <a href="{% url 'managementSystem' %}" class="d-flex justify-content-center align-items-center"><i class="fas fa-phone-volume text-primary me-1"></i> Hire Developer</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- services section ends -->
+
+      <!-- portofolio section begins -->
+      <section class="row mb-4 py-4" id="portofolioSection">
+        <div class="col-12 mb-4">
+          <span class="h6 d-block text-center text-primary fw-bold">Feature Portofolio</span>
+          <span class="h5 d-block text-center fw-bold">Our Project Works For Your Creative Business</span>
+        </div>
+
+        <!-- project item -->
+        {% for x in projects %}
+        <div class="col-lg-3 col-12 mb-4">
+          <img src="{{ x.projectImg.url }}" alt="{{ x.projectName }}" width="100%" height="150px" class="d-block shadow mb-2">
+          <span class="d-block text-start fw-bold">{{ x.projectName }}</span>
+          <a href="{% url 'projectItem' x.pk %}" class="projectLink">see details</a>
+        </div>
+        {% empty %}
+          <p>No projects to display.</p>
+        {% endfor %}
+        
+      </section>
+      <!-- portofolio section ends -->
+
+      <!-- testimonials section begins -->
+      <section class="px-0 py-4 mb-4 bg-light" id="testimonialsSection">
+        <div class="row mx-0 px-0">
+          <div class="col-12 mb-4">
+            <span class="h6 d-block text-center text-primary fw-bold">Testimonials</span>
+            <span class="h5 d-block text-center fw-bold">What our clients say</span>
+          </div>
+          <!-- client testimonial -->
+          {% for x in testimonials %}
+          <div class="col-lg-3 col-12 mb-4">
+            <div class="bg-white shadow rounded px-2 py-4">
+              <div class="d-flex justify-content-center align-items-center mb-3">
+                <span class="d-block text-warning text-center">
+                  <img src="{{ x.testimonialLogo.url }}" alt="{{ x.testimonialName }}" height="30" width="30" class="d-block">
+                </span>
+              </div>
+              <p class="text-center py-2">
+                <i class="bi bi-quote me-1"></i>
+                {{ x.testimonialStatement }}
+              </p>
+              <div class="d-flex justify-content-center align-items-center mb-3">
+                <span class="d-block">
+                  <img src="{{ x.testimonialImage.url }}" alt="{{ x.testimonialName }}" height="60" width="60" class="d-block rounded-circle">
+                </span>
+              </div>
+              <span class="d-block text-center fw-bold h6">{{ x.testimonialName }}</span>
+              <span class="d-block text-center text-muted">{{ x.testimonialTitle }}</span>
+            </div>
+          </div>
+          {% empty %}
+          <p>No Testimonials</p>
+          {% endfor %}
+        </div>
+      </section>
+      <!-- testimonials section ends -->
+
+      <!-- blog section begins -->
+      <section class="row mb-1 py-4" id="blogSection">
+        <div class="col-12 mb-4">
+          <span class="h6 d-block text-center text-primary fw-bold">Our Blog</span>
+          <span class="h5 d-block text-center fw-bold">Recommended reading</span>
+        </div>
+
+        <!-- blog item -->
+        {% for x in blogPost %}
+        <div class="col-lg-3 col-12 px-2 mb-4">
+          <div class="shadow px-0 rounded blogContainer">
+            <img src="{{ x.blogImg.url }}" alt="blog heading" width="100%" height="150px" class="d-block mb-1">
+            <div class="p-2 my-2">
+              <span class="d-block text-start fw-bold mb-2 blogHeading">{{ x.blogTitle }}</span>
+              <div class="d-flex flex-row align-items-center my-2">
+                <img src="{{ x.blogUserImg.url }}" alt="client testimonial" height="30" width="30" class="d-block rounded-circle">
+                <small class="d-block text-start text-muted px-2">{{ x.blogAuthor }}</small>
+              </div>
+              <p class="py-1 blogDescText">
+                {{ x.blogRead }}
+              </p>
+              <a href="{% url 'blogItem' x.pk %}" class="projectLink">read more</a>
+            </div>
+          </div>
+        </div>
+        {% empty %}
+        <p>No Blogs to display</p>
+        {% endfor %}
+      </section>
+      <!-- blog section ends -->
+
+      <!-- contact Us section -->
+      <section class="mb-2 py-4" id="contactUsSection">
+        <div class="row mb-2 py-1">
+          <div class="col-12 mb-4">
+            <span class="h6 d-block text-center text-primary fw-bold">Contact Us</span>
+            <span class="h5 d-block text-center fw-bold">Get In Touch</span>
+          </div>
+          <div class="col-12">
+            <form action="#" method="post" class="contactForm bg-white px-2 shadow w-100 py-3 mb-2" id="contactForm" name="contactForm">
+                {% csrf_token %}
+              <div class="row">
+                <div class="col-lg-6 col-12 mb-3">
+                  <label for="name" class="d-block mb-1">Name</label>
+                  <input type="text" class="d-block w-100 contactName" name="userName" id="ContactName" placeholder="Lestone Mandieka" required>
+                </div>
+                <div class="col-lg-6 col-12 mb-3">
+                  <label for="name" class="d-block mb-1">Telephone No.</label>
+                  <input type="number" class="d-block w-100 contactName" name="telNumber" id="ContactName" placeholder="+254712339293" required>
+                </div>
+                <div class="col-12 mb-3">
+                  <label for="name" class="d-block mb-1">Email Address</label>
+                  <input type="email" class="d-block w-100 contactName" name="userEmail" id="ContactName" placeholder="info@techcerus.com" required>
+                </div>
+                <div class="col-12 mb-3">
+                  <label for="formInquiry" class="d-block mb-1">Heading</label>
+                  <input type="text" class="d-block w-100 contactName" name="msgHeading" id="ContactName" placeholder="E-Commerce project needed" required>
+                </div>
+                <div class="col-12 mb-1">
+                  <label for="message" class="d-block mb-1">Message</label>
+                  <textarea class="d-block w-100 mb-3" name="msgBody" id="contactMsg" cols="30" rows="4" required></textarea>
+                </div>
+                <div class="col-12 mb-4">
+                  <button type="submit" class="btn btn-primary"><i class="bi bi-send text-white me-1"></i>Send</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- contact Us section -->
+
+      <!-- request a free quote section begins -->
+      <section class="px-2 mb-4 py-1">
+        <div class="row shadow bg-primary">
+          <div class="col-lg-6 col-12 mb-2 d-flex flex-column align-items-start align-content-center">
+            <span class="d-block h5 text-white text-start mt-4 quoteHead">Request a free quote</span>
+            <p class="py-1 text-white">
+              We will send you a precise calculation in pdf format
+            </p>
+          </div>
+          <div class="col-lg-6 col-12 mb-4">
+            <a href="{% url 'freeQuote' %}" class="btn btn-white mt-1 mt-lg-5">Get a Free Quote</a>
+          </div>
+        </div>
+      </section>
+      <!-- request a free quote section ends -->
+    </main>
+    <!-- main section ends here -->
+
+    <!-- footer section begins -->
+    <footer class="bg-light py-4">
+      <div class="row">
+        <div class="col-lg-6 col-12 mb-4">
+          <span class="d-block text-start fw-bold mb-2">Techcerus Solutions</span>
+          <p class="py-1 footerText">
+            Techcerus is your global tech innovation partner who have pioneered the web, app and IoT development solutions services with rich expertise having successfully worked on all industry verticals & business sizes.
+          </p>
+          <a href="#" class="d-block text-start mb-2 footerLink"><i class="bi bi-telephone me-2"></i>+254712339293</a>
+          <a href="#" class="d-block text-start mb-2 footerLink"><i class="bi bi-envelope me-2"></i>info@techcerus.com</a>
+        </div>
+        <div class="col-lg-3 col-12 mb-4">
+          <span class="d-block text-start fw-bold mb-2">Our Services</span>
+          <a href="#servicesSection" class="d-block text-start mb-2 footerLink"><i class="bi bi-arrow-right-short me-1"></i>Mobile apps development</a>
+          <a href="#servicesSection" class="d-block text-start mb-2 footerLink"><i class="bi bi-arrow-right-short me-1"></i>Web design & development</a>
+          <a href="#servicesSection" class="d-block text-start mb-2 footerLink"><i class="bi bi-arrow-right-short me-1"></i>UI/UX design</a>
+          <a href="#servicesSection" class="d-block text-start mb-2 footerLink"><i class="bi bi-arrow-right-short me-1"></i>Management systems</a>
+        </div>
+        <div class="col-lg-3 col-12 mb-4">
+          <span class="d-block text-start fw-bold mb-2">Stay Connected</span>
+          <div class="d-flex flex-row align-items-center py-3">
+            <a href="#" class="socialLink mx-2 bi bi-whatsapp"></a>
+            <a href="https://www.facebook.com/profile.php?id=100091924707914" class="socialLink mx-2 bi bi-facebook"></a>
+            <a href="https://instagram.com/techcerus_solutions?igshid=NTc4MTIwNjQ2YQ==" class="socialLink mx-2 bi bi-instagram"></a>
+            <a href="#" class="socialLink mx-2 bi bi-twitter"></a>
+            <a href="#" class="socialLink mx-2 bi bi-linkedin"></a>
+          </div>
+        </div>
+        <div class="col-12 mb-4">
+          <span class="d-block text-start text-lg-center">
+            Powered by <a href="#" class="pe-1">Techcerus Solutions</a>&copy; 2022 - 2023
+          </span>
+        </div>
+      </div>
+    </footer>
+    <!-- footer section ends -->
+  </div>
+
+
+    <!-- JQUERY JS LINK -->
+    <script src="{%static 'assets/js/jquery.js'%}"></script>
+
+    <!-- BOOTSTRAP JS LINK -->
+    <script src="{%static 'assets/js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{%static 'assets/js/mdb.min.js'%}"></script>
+
+    <!-- FONTAWESOME JS LINK -->
+    <script src="{%static 'assets/js/all.js'%}"></script>
+
+    <!-- main js link -->
+    <script src="{%static 'assets/js/main.js'%}"></script>
+</body>
+
+</html>

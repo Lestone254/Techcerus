@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+{%load static%}
+{%load customtags%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techcerus | Project Item</title>
+
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" href="{%static 'assets/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/mdb.min.css'%}">
+    <link rel="stylesheet" href="{%static 'node_modules/bootstrap-icons/font/bootstrap-icons.css'%}">
+
+    <!-- FONT AWESOME CSS LINK -->
+    <link rel="stylesheet" href="{%static 'assets/css/all.css'%}">
+
+    <!-- OWL CAROUSEL CSS LINK -->
+    <link rel="stylesheet" href="{%static 'assets/css/owl.carousel.min.css'%}">    
+    <link rel="stylesheet" href="{%static 'assets/css/owl.theme.default.min.css'%}">    
+
+    <!-- STYLE CSS LINK -->
+    <link rel="stylesheet" href="{%static 'assets/css/style.css'%}">
+</head>
+<body>
+   <!-- header section begins here -->
+   <header class="bg-white shadow py-2" id="header">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <!-- logo and humberger Menu -->
+        <div class="d-flex flex-row align-items-center">
+          <a href="#" class="d-block text-start text-primary logoLink">
+            <img src="{%static 'assets/images/logo.png'%}" alt="techcerus logo" width="60" height="60">
+          </a>
+        </div>
+        <!-- contact us btn -->
+        <a href="{% url 'freeQuote' %}" class="btn btn-primary bi bi-bolt shadow-0"><i class="bi bi-envelope-paper text-white me-2"></i>Get In Touch</a>
+      </div>
+    </div>
+  </header>
+  <!-- header section ends here -->
+
+  <div class="container-fluid">
+    <!-- main section begins here -->
+    <main class="main" id="main">
+      <!-- project item section begins here -->
+      <section class="px-0 mx-0 projectItemSection" id="projectItemSection">
+        <div class="row px-0 mx-0">
+          <!-- image -->
+          <div class="col-12 mb-4">
+            <img src="{{project.projectImg.url}}" alt="{{ project.projectName }}" width="100%" height="450px">
+          </div>
+          <div class="col-12 mb-4">
+            <span class="d-block h4 text-start fw-bold mb-3">{{ project.projectName }}</span>
+            <span class="d-block h6 fw-bold text-start mb-2">Description</span>
+            <p class="py-1">
+              <i class="bi bi-quote me-1"></i>
+              {{ project.projectDescription }}
+            </p>
+          </div>
+          <div class="col-md-6 col-12 mb-4">
+            <span class="d-block h5 text-start fw-bold mb-3">Features</span>
+            <div class="d-flex flex-column">
+              {% for x in project.projectFeatures|cut%}
+              <p class="mb-2">
+                <i class="bi bi-check me-1"></i>
+                {{x}}
+              </p>
+              {%endfor%}
+            </div>
+          </div>
+          <div class="col-md-6 col-12 mb-4">
+            <span class="d-block h5 text-start fw-bold mb-3">Languages</span>
+            <div class="d-flex flex-row">
+              {% for x in project.projectLanguages|cut%}
+              <span class="d-block p-2 text-center rounded text-white bg-info me-2 mb-4">
+               {{x}}
+              </span>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- project item section ends here -->
+    </main>
+    <!-- main section ends here -->
+
+    <!-- footer section begins -->
+    <footer class="bg-light py-4">
+      <div class="row container">
+        <div class="col-lg-6 col-12 mb-4">
+          <span class="d-block text-start fw-bold mb-2">Techcerus Solutions</span>
+          <p class="py-1 footerText">
+            Techcerus is your global tech innovation partner who have pioneered the web, app and IoT development solutions services with rich expertise having successfully worked on all industry verticals & business sizes.
+          </p>
+          <a href="#" class="d-block text-start mb-2 footerLink"><i class="bi bi-telephone me-2"></i>+254712339293</a>
+          <a href="#" class="d-block text-start mb-2 footerLink"><i class="bi bi-envelope me-2"></i>info@techcerus.com</a>
+        </div>
+        <div class="col-lg-3 col-12 mb-4">
+          <span class="d-block text-start fw-bold mb-2">Our Services</span>
+          <a href="#servicesSection" class="d-block text-start mb-2 footerLink"><i class="bi bi-arrow-right-short me-1"></i>Mobile apps development</a>
+          <a href="#servicesSection" class="d-block text-start mb-2 footerLink"><i class="bi bi-arrow-right-short me-1"></i>Web design & development</a>
+          <a href="#servicesSection" class="d-block text-start mb-2 footerLink"><i class="bi bi-arrow-right-short me-1"></i>UI/UX design</a>
+          <a href="#servicesSection" class="d-block text-start mb-2 footerLink"><i class="bi bi-arrow-right-short me-1"></i>Management systems</a>
+        </div>
+        <div class="col-lg-3 col-12 mb-4">
+          <span class="d-block text-start fw-bold mb-2">Stay Connected</span>
+          <div class="d-flex flex-row align-items-center py-3">
+            <a href="#" class="socialLink mx-2 bi bi-whatsapp"></a>
+            <a href="https://www.facebook.com/profile.php?id=100091924707914" class="socialLink mx-2 bi bi-facebook"></a>
+            <a href="https://instagram.com/techcerus_solutions?igshid=NTc4MTIwNjQ2YQ==" class="socialLink mx-2 bi bi-instagram"></a>
+            <a href="#" class="socialLink mx-2 bi bi-twitter"></a>
+            <a href="#" class="socialLink mx-2 bi bi-linkedin"></a>
+          </div>
+        </div>
+        <div class="col-12 mb-4">
+          <span class="d-block text-start text-lg-center">
+            Powered by <a href="#" class="pe-1">Techcerus Solutions</a>&copy; 2022 - 2023
+          </span>
+        </div>
+      </div>
+    </footer>
+    <!-- footer section ends -->
+  </div>
+
+
+    <!-- JQUERY JS LINK -->
+    <script src="{%static 'assets/js/jquery.js'%}"></script>
+
+    <!-- BOOTSTRAP JS LINK -->
+    <script src="{%static 'assets/js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{%static 'assets/js/mdb.min.js'%}"></script>
+
+    <!-- FONTAWESOME JS LINK -->
+    <script src="{%static 'assets/js/all.js'%}"></script>
+
+    <!-- OWL CAROUSEL JS LINK -->
+    <script src="{%static 'assets/js/owl.carousel.js'%}"></script>
+    <script src="{%static 'assets/js/owl.carousel.min.js'%}"></script>
+
+    <!-- main js link -->
+    <script src="{%static 'assets/js/main.js'%}"></script>
+</body>
+
+</html>

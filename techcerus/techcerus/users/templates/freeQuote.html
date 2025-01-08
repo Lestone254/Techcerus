@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techcerus | Free Quote</title>
+
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" href="{%static 'assets/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/mdb.min.css'%}">
+    <link rel="stylesheet" href="{%static 'node_modules/bootstrap-icons/font/bootstrap-icons.css'%}">
+
+    <!-- FONT AWESOME CSS LINK -->
+    <link rel="stylesheet" href="{%static 'assets/css/all.css'%}">
+
+    <!-- STYLE CSS LINK -->
+    <link rel="stylesheet" href="{%static 'assets/css/style.css'%}">
+</head>
+<body>
+  <div class="container-fluid">
+    <!-- main section begins here -->
+    <main id="main">
+      <!-- contact Us section -->
+      <section class="mb-2 py-4" id="contactUsSection">
+        <div class="row mb-2 py-1">
+          <div class="col-12 mb-4">
+            <span class="h6 d-block text-center text-primary fw-bold">Quotation</span>
+            <span class="h5 d-block text-center fw-bold">Request A Free Quote</span>
+          </div>
+          <div class="col-12">
+            <form action="#" method="post" class="contactForm bg-white shadow p-3 mb-2" id="contactForm" name="contactForm">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-lg-6 col-12 mb-3">
+                  <label for="userQuoteName" class="d-block mb-1">Name</label>
+                  <input type="text" class="d-block w-100 contactName" name="userName" id="ContactName" placeholder="Lestone Mandieka" required>
+                </div>
+                <div class="col-lg-6 col-12 mb-3">
+                  <label for="telQuoteNumber" class="d-block mb-1">Telephone No.</label>
+                  <input type="number" class="d-block w-100 contactName" name="telQuoteNumber" id="telNumber" placeholder="+254712339293" required>
+                </div>
+                <div class="col-12 mb-3">
+                  <label for="userQuoteEmail" class="d-block mb-1">Email Address</label>
+                  <input type="email" class="d-block w-100 contactName" name="userQuoteEmail" id="ContactName" placeholder="info@techcerus.com" required>
+                </div>
+                <div class="col-12 mb-3">
+                  <label for="serviceQuoteCategory" class="d-block mb-1">Service Category</label>
+                  <select name="serviceQuoteCategory" id="serviceCategory" class="d-block py-1 w-100 contactName">
+                    <option value="Mobile apps development" selected>Mobile apps development</option>
+                    <option value="Web design & development">Web design & development</option>
+                    <option value="UI/UX design">UI/UX design</option>
+                    <option value="Management systems">Management systems</option>
+                  </select>
+                </div>
+                <div class="col-12 mb-3">
+                  <label for="msgQuoteHeading" class="d-block mb-1">Heading</label>
+                  <input type="text" class="d-block w-100 contactName" name="msgQuoteHeading" id="ContactName" placeholder="E-Commerce project needed" required>
+                </div>
+                <div class="col-12 mb-1">
+                  <label for="msgBody" class="d-block mb-1">Message</label>
+                  <textarea name="msgQuoteBody" class="d-block w-100 mb-3" id="contactMsg" cols="30" rows="4" required></textarea>
+                </div>
+                <div class="col-12 mb-4">
+                  <button type="submit" class="btn btn-primary"><i class="bi bi-send text-white me-1"></i>Send</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-12 my-2">
+            <p class="py-1">
+                <span class="fw-bold">NOTE:</span>
+                We will send you a precise calculation in pdf format within 24 hrs.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- contact Us section -->
+    </main>
+    <!-- main section ends here -->
+
+  </div>
+
+
+    <!-- JQUERY JS LINK -->
+    <script src="{%static 'assets/js/jquery.js'%}"></script>
+
+    <!-- BOOTSTRAP JS LINK -->
+    <script src="{%static 'assets/js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{%static 'assets/js/mdb.min.js'%}"></script>
+
+    <!-- FONTAWESOME JS LINK -->
+    <script src="{%static 'assets/js/all.js'%}"></script>
+
+    <!-- main js link -->
+    <script src="{%static 'assets/js/main.js'%}"></script>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techcerus | Blog Item</title>
+
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" href="{%static 'assets/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static 'assets/css/mdb.min.css'%}">
+    <link rel="stylesheet" href="{%static 'node_modules/bootstrap-icons/font/bootstrap-icons.css'%}">
+
+    <!-- FONT AWESOME CSS LINK -->
+    <link rel="stylesheet" href="{%static 'assets/css/all.css'%}">
+
+    <!-- STYLE CSS LINK -->
+    <link rel="stylesheet" href="{%static 'assets/css/style.css'%}">
+</head>
+<body>
+
+  <div class="container-fluid">
+    <!-- main section begins here -->
+    <main class="main" id="main">
+      <!-- blog item section begins here -->
+      <section class="px-0 mx-0 blogItemSection" id="blogItemSection">
+        <div class="row px-0 mx-0">
+          <!-- image -->
+          <div class="col-12 mb-4">
+            <img src="{{blog.blogImg.url}}" alt="{{blog.projectTitle.url}}" width="100%" height="350px">
+          </div>
+          <div class="col-12 mb-4">
+            <span class="d-block text-start fw-bold mb-3 blogHeading">{{blog.blogTitle}}</span>
+            <div class="d-flex flex-row align-items-center my-2">
+                <img src="{{blog.blogUserImg.url}}" alt="client testimonial" height="30" width="30" class="d-block rounded-circle">
+                <small class="d-block text-start text-muted px-2">{{blog.blogAuthor}}</small>
+                <small>|</small>
+                <small class="d-block text-start text-muted ps-2">{{blog.timestamp}}</small>
+            </div>
+            <p class="py-1">
+              <i class="bi bi-quote me-1"></i>
+              {{blog.blogRead}}
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- project item section ends here -->
+      <!-- blog section begins -->
+      <section class="row container px-0 mx-0 mb-1 py-4" id="blogSection">
+        <div class="col-12 mb-3">
+          <span class="h5 d-block text-start fw-bold">More articles</span>
+        </div>
+
+        <!-- blog item -->
+        {% for x in blogPost %}
+        <div class="col-lg-3 col-12 px-2 mb-4">
+          <div class="shadow px-0 rounded blogContainer">
+            <img src="{{ x.blogImg.url }}" alt="blog heading" width="100%" height="150px" class="d-block mb-1">
+            <div class="p-2 my-2">
+              <span class="d-block text-start fw-bold mb-2 blogHeading">Android 9 pie: What's exciting</span>
+              <div class="d-flex flex-row align-items-center my-2">
+                <img src="{{ x.blogUserImg.url }}" alt="client testimonial" height="30" width="30" class="d-block rounded-circle">
+                <small class="d-block text-start text-muted px-2">{{ x.blogAuthor }}</small>
+              </div>
+              <p class="py-1 blogDescText">
+                {{ x.blogTitle }}
+              </p>
+              <a href="{% url 'blogItem' x.pk %}" class="projectLink">read more</a>
+            </div>
+          </div>
+        </div>
+        {% empty %}
+        <p>No Blogs to display</p>
+        {% endfor %}
+      </section>
+      <!-- blog section ends -->
+    </main>
+    <!-- main section ends here -->
+
+    <!-- footer section begins -->
+    <footer class="bg-light py-4">
+      <div class="row container">
+        <div class="col-lg-6 col-12 mb-4">
+          <span class="d-block text-start fw-bold mb-2">Techcerus Solutions</span>
+          <p class="py-1 footerText">
+            Techcerus is your global tech innovation partner who have pioneered the web, app and IoT development solutions services with rich expertise having successfully worked on all industry verticals & business sizes.
+          </p>
+          <a href="#" class="d-block text-start mb-2 footerLink"><i class="bi bi-telephone me-2"></i>+254712339293</a>
+          <a href="#" class="d-block text-start mb-2 footerLink"><i class="bi bi-envelope me-2"></i>info@techcerus.com</a>
+        </div>
+        <div class="col-lg-3 col-12 mb-4">
+          <span class="d-block text-start fw-bold mb-2">Our Services</span>
+          <a href="#servicesSection" class="d-block text-start mb-2 footerLink"><i class="bi bi-arrow-right-short me-1"></i>Mobile apps development</a>
+          <a href="#servicesSection" class="d-block text-start mb-2 footerLink"><i class="bi bi-arrow-right-short me-1"></i>Web design & development</a>
+          <a href="#servicesSection" class="d-block text-start mb-2 footerLink"><i class="bi bi-arrow-right-short me-1"></i>UI/UX design</a>
+          <a href="#servicesSection" class="d-block text-start mb-2 footerLink"><i class="bi bi-arrow-right-short me-1"></i>Management systems</a>
+        </div>
+        <div class="col-lg-3 col-12 mb-4">
+          <span class="d-block text-start fw-bold mb-2">Stay Connected</span>
+          <div class="d-flex flex-row align-items-center py-3">
+            <a href="#" class="socialLink mx-2 bi bi-whatsapp"></a>
+            <a href="#" class="socialLink mx-2 bi bi-facebook"></a>
+            <a href="#" class="socialLink mx-2 bi bi-instagram"></a>
+            <a href="#" class="socialLink mx-2 bi bi-twitter"></a>
+            <a href="#" class="socialLink mx-2 bi bi-linkedin"></a>
+          </div>
+        </div>
+        <div class="col-12 mb-4">
+          <span class="d-block text-start text-lg-center">
+            Powered by <a href="#" class="pe-1">Techcerus Solutions</a>&copy; 2022 - 2023
+          </span>
+        </div>
+      </div>
+    </footer>
+    <!-- footer section ends -->
+  </div>
+
+
+    <!-- JQUERY JS LINK -->
+    <script src="{%static 'assets/js/jquery.js'%}"></script>
+
+    <!-- BOOTSTRAP JS LINK -->
+    <script src="{%static 'assets/js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{%static 'assets/js/mdb.min.js'%}"></script>
+
+    <!-- FONTAWESOME JS LINK -->
+    <script src="{%static 'assets/js/all.js'%}"></script>
+
+    <!-- main js link -->
+    <script src="{%static 'assets/js/main.js'%}"></script>
+</body>
+
+</html>
